@@ -13,6 +13,7 @@ imageio
 
 glog
 icecream
+colored_glog
 
 pandas
 pyrealsense2
