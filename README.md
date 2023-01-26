@@ -68,7 +68,7 @@
 
 Clone repo with submodules:
 ```
-git clone https://github.com/ToniRV/NeRF-SLAM.git --recurse-submodules
+git clone https://github.com/saimouli/NeRF-SLAM.git --recurse-submodules
 git submodule update --init --recursive
 ```
 
