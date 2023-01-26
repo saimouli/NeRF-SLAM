@@ -76,13 +76,13 @@ From this point on, use a virtual environment...
 Install torch (see [here](https://pytorch.org/get-started/previous-versions) for other versions):
 ```
 # CUDA 11.3
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+pip3 install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
 Pip install requirements:
 ```
-pip install -r requirements.txt
-pip install -r ./thirdparty/gtsam/python/requirements.txt
+pip3 install -r requirements.txt
+pip3 install -r ./thirdparty/gtsam/python/requirements.txt
 ```
 
 Compile ngp (you need cmake>3.22):
@@ -96,12 +96,12 @@ Compile gtsam and enable the python wrapper:
 cmake ./thirdparty/gtsam -DGTSAM_BUILD_PYTHON=1 -B build_gtsam 
 cmake --build build_gtsam --config RelWithDebInfo -j
 cd build_gtsam
-make python-install
+make python3-install
 ```
 
 Install:
 ```
-python setup.py install
+python3 setup.py install
 ```
 
 ## Download Sample Data
@@ -114,7 +114,7 @@ This will just download one of the replica scenes:
 ## Run
 
 ```
-python ./examples/slam_demo.py --dataset_dir=./datasets/Replica/office0 --dataset_name=nerf --buffer=100 --slam --parallel_run --img_stride=2 --fusion='nerf' --multi_gpu --gui
+python3 ./examples/slam_demo.py --dataset_dir=./datasets/Replica/office0 --dataset_name=nerf --buffer=100 --slam --parallel_run --img_stride=2 --fusion='nerf' --multi_gpu --gui
 ```
 
 This repo also implements [Sigma-Fusion](https://arxiv.org/abs/2210.01276): just change `--fusion='sigma'` to run that.
